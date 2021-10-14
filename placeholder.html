@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+
+input{
+    background: url('images/star.png')no-repeat right;	   
+    background-position-x: 30%;  
+	background-position-y: 40%;	
+	background-size: 6px;	
+	height:40px;
+	padding:0 0 0 15px;
+	border-radius: 4px;
+    border: 1px solid #d0c9c9;
+    outline: 0;
+}
+
+input:focus {
+background:none;
+text-indent:0;
+}
+
+::-webkit-input-placeholder {font-style: italic;}
+</style>
+</head>
+<body>
+<input id="tests" type="text" placeholder="Name" onfocus="this.placeholder=''" onblur="this.placeholder='Name'">
+<div style="display:none;">Hi</diV>
+</body>
+</html>
+
+<script>
+// $('input').keyup(function() {	
+// 	 if($('input').val() !== ''){	 
+//         $('input').css("background", "none");
+// 	}else if($('input').val() == ''){		
+//         $('input').css("background", "url('images/star.png')no-repeat right");
+//         $('input').css("background-position-x", "30%");
+//         $('input').css("background-position-y", "40%");
+//         $('input').css("background-size", "6px");       
+            
+//     }		
+// });
+
+var testsjs = document.getElementById("tests");
+testsjs.addEventListner("change", function(){
+    // testsjs.placeholder = "";
+    console.log("hello");
+})
+var tt = testsjs.value;
+
+
+
+</script>

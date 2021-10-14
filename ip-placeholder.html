@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+lklk;lk;l b
+    <style>
+        .pcStyle{
+            background: url('images/star.png')no-repeat right;	   
+            background-position-x: 30%;  
+            background-position-y: 40%;	
+            background-size: 6px;	
+            height:40px;
+            padding:0 0 0 15px;
+            border-radius: 4px;
+            border: 1px solid #d0c9c9;
+            outline: 0;
+        }
+    </style>
+    
+    <div>
+        <input id="test" class="pcStyle" type="text" placeholder="Name" onfocusout= "testing()">
+    </div>
+
+    <script>
+        
+        var testjs = document.getElementById("test");
+        
+
+        testjs.addEventListener('focus', function(){
+            testjs.placeholder = "";
+            testjs.style.backgroundImage = "none";
+        })
+        function testing(){
+            if(testjs.value == ""){
+                testjs.placeholder = "Name"
+                testjs.style.backgroundImage = "url('images/star.png')"
+            }
+        }
+    </script>
+
+</body>
+</html>
